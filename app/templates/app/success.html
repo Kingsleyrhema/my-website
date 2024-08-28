@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Submitted</title>
+<link rel="shortcut icon" href="{% static '/logo-horizontal.svg' %}">
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container mx-auto py-8">
+<div class="max-w-4xl mx-auto bg-white p-8 rounded shadow">
+<h2 class="text-2xl font-bold mb-8">Application Submitted</h2>
+<p class="mb-4">Thank you for submitting your application. We will review your information and get back to you shortly.</p>
+<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="{% url 'app:index' %}">Return to Home</a>
+</div>
+</div>
+</body>
+</html>
