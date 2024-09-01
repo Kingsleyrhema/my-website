@@ -39,7 +39,7 @@ SECRET_KEY = "django-insecure-d0mb37+fdc0im_9r%07h-m_y3uhx85rcw%hg&w5043gj4$11il
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rehubdevelopers.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['rehubdevelopers.pythonanywhere.com','*']
 
 
 # Application definition
