@@ -45,3 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.nav-link');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        // Check if the navbar is currently expanded
+        if (navbarCollapse.classList.contains('show')) {
+          // If it's expanded, trigger the collapse
+          navbarCollapse.classList.remove('show');
+          navbarCollapse.classList.add('collapsing');
+          setTimeout(function() {
+            navbarCollapse.classList.remove('collapsing');
+            navbarCollapse.classList.add('collapse');
+          }, 300); // Match the duration with your CSS transition
+        }
+      });
+    });
+  });
