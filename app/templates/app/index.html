@@ -9,8 +9,9 @@
 <meta name="description" content="I offer cutting edge technology services streamlined to meet you needs">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11258240476"></script>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
+  window.dataLayer = windopy w.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
@@ -31,12 +32,66 @@
 <link href="{% static 'css/icomoon.css' %}" rel="stylesheet"/>
 <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
 <link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
+
+<style>
+	.service-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.service-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+}
+
+.service-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.service-detail {
+    display: none;
+}
+
+</style>
+
 </head>
 <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 <div class="container">
-
-<a class="navbar-brand" href="index.html">rehubdeveloper</a>
+<img src="{% static '/images/Logo_noBg.png' %}" width="60px">
+<a class="navbar-brand" href="index.html">rehubdevelopers</a>
 
 <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav" data-toggle="collapse" type="button">
 <span class="oi oi-menu"></span> Menu
@@ -45,6 +100,7 @@
 <ul class="navbar-nav nav ml-auto">
 <li class="nav-item"><a class="nav-link" href="#home-section"><span>Home</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#about-section"><span>About</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#founder-about"><span>About the founder</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#resume-section"><span>Education</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#services-section"><span>Services</span></a></li>
 <!-- <li class="nav-item"><a class="nav-link" href="#skills-section"><span>Skills</span></a></li> -->
@@ -56,245 +112,339 @@
 </div>
 </nav>
 
-<section id="home-section" class="hero">
-	<div class="home-slider owl-carousel">
-		<div class="slider-item">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row d-flex no-gutters slider-text align-items-center justify-content-center" >
-					<div class=" d-flex align-items-center ftco-animate text-center" >
-						<div class="text">
-							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm <span>Kingsley Rhema</span></h1>
-							<h2 class="mb-4 mt-3" >Founder of Rehub Developers</h2>
-							<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+<!-- ABOUT REHUBDEVELOPERS -->
+
+<section id="about-section" id="home-section" >
+	<section class="hero" style="margin-top: 0;">
+		<div class="home-slider owl-carousel" style="size: 50%">
+			<div class="slider-item ">
+			
+				<div class="container">
+					<div class="row g-0  d-flex no-gutters slider-text align-items-center justify-content-center" >
+						<div class=" d-flex align-items-center ftco-animate text-center" >
+							<div class="text">
+								<span class="subheading">Welcome</span>
+								<h1 class="mb-4 mt-3">To  <span>Rehub Developers</span></h1>
+								<h2 class="mb-4 mt-3" >Your one click to cutting edge technologies</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="slider-item">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row d-flex no-gutters slider-text align-items-center justify-content-center" >
-					<div class=" d-flex align-items-center ftco-animate text-center" >
-						<div class="text">
-							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm a <span>Data Scientist</span></h1>
-							<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-item">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row d-flex no-gutters slider-text align-items-center justify-content-center" >
-					<div class=" d-flex align-items-center ftco-animate text-center" >
-						<div class="text">
-							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm a <span>Machine Learning Expert</span></h1>
-							<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slider-item">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row d-flex no-gutters slider-text align-items-center justify-content-center" >
-					<div class=" d-flex align-items-center ftco-animate text-center" >
-						<div class="text">
-							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm a <span>Business Solution Provider</span></h1>
-							<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-<div class="container">
-<div class="row d-flex">
-<div class="col-md-6 col-lg-5 d-flex">
-<div class="img-about img d-flex align-items-stretch">
-<div class="overlay"></div>
-<div class="img d-flex align-self-stretch align-items-center" style="background-image: url('{% static 'images/Logo_noBg.png' %}'); ">
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-<div class="row justify-content-start pb-3">
-<div class="col-md-12 heading-section ftco-animate">
-<h1 class="big">About</h1>
-<h2 class="mb-4">About Me</h2>
-<p>I am a multifaceted professional with a passion for data science, backend development, and automation engineering</p>
-<ul class="about-info mt-4 px-md-0 px-2">
-<li class="d-flex"><span>Name:</span> <span>Kingsley Rhema</span></li>
-<li class="d-flex"><span>Date of birth:</span> <span>July 03, 2005</span></li>
-<!-- <li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li> -->
-<!-- <li class="d-flex"><span>Zip code:</span> <span>101015</span></li> -->
-<li class="d-flex"><span>Email:</span> <span><a href="mailto:inforehubdeveloper@gmail.com">inforehubdeveloper@gmail.com</a></span></li>
-<li class="d-flex"><span>Phone: </span> <span>+234 808 204 6332</span></li>
-</ul>
-</div>    
-</div>
-<div class="counter-wrap ftco-animate d-flex mt-md-3">
-<div class="text">
-<p class="mb-4">
-<span class="number" data-number="20">0</span>
-<span>Project complete</span>
-</p>
-<p>
-	<a class="btn btn-primary py-3 px-3" href="#" download="">Download CV</a>
-</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section ftco-no-pb" id="resume-section">
-<div class="container">
-<div class="row justify-content-center pb-5">
-<div class="col-md-10 heading-section text-center ftco-animate">
-<h1 class="big big-2">education</h1>
-<h2 class="mb-4">EDUCATION</h2>
-<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p> -->
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="resume-wrap ftco-animate">
-<span class="date">2016-2021</span>
-<h2>West African Senior Certificate Examination</h2>
-<h5 style="color: grey;">TIMI COMPREHENSIVE COLLEGE</h5>
-<p class="mt-4" style="color: white;">Computer Science &amp; Data Processing</p>
-</div>
-<!-- ENTER MORE FIELDS HERE -->
-<div class="resume-wrap ftco-animate">
-	<span class="date">2022-2023</span>
-	<h2>Certificate of Completion</h2><br>
-	<h5 style="color: grey;">BINCOM ACADEMY (Remote)</h5>
-<p class="mt-4" style="color: white;">Python Development</p>
-	</div>
-
-	<div class="resume-wrap ftco-animate">
-		<span class="date">2023 - PRESENT</span>
-		<h2>B.S.C</h2>
-		<h5 style="color: grey;">WorldQuant University (Remote)</h5>
-	<p class="mt-4" style="color: white;">Data Scince</p>
-	</div>
-</div>
-
-<div class="col-md-6">
-	<div class="resume-wrap ftco-animate">
-		<span class="date">2022-2023</span>
-		<h2>Certificate of Achievement</h2>
-		<h5 style="color: grey;">YOMI DENZEL FOUNDATION</h5>
-<p class="mt-4" style="color: white;">Core & Advanced Python | Data science & Machine Learning | Blockchain Functional Training</p>
-	</div>
-
-<!-- ENTER MORE FIELDS HERE -->
-<div class="resume-wrap ftco-animate">
-	<span class="date">2023 - PRESENT</span>
-	<h2>B.S.C</h2>
-	<h5 style="color: grey;">University of Ibadan</h5>
-<p class="mt-4" style="color: white;">Computer Science</p>
-</div>
-</div>
-</div>
-<div class="row justify-content-center mt-5">
-<div class="col-md-6 text-center ftco-animate">
-<!-- <p><a class="btn btn-primary py-4 px-5" href="#">Download CV</a></p> -->
-</div>
-</div>
-</div>
-</section>
-<section class="ftco-section" id="services-section">
-<div class="container">
-<div class="row justify-content-center py-5 mt-5">
-<div class="col-md-12 heading-section text-center ftco-animate">
-<h1 class="big big-2">Services</h1>
-<h2 class="mb-4">Services</h2>
-<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
-</div>
-</div>
-<div class="row">
-	<div class="col-md-4 text-center d-flex ftco-animate">
-		<a class="services-1" href="#">
-		<div class="desc">
-		<h3 class="mb-5 text-center" style="padding-top: 70px; font-size: large;">Software Development</h3>
-		</div>
-		</a>
-		</div>
-
-<div class="col-md-4 text-center d-flex ftco-animate">
-	<a class="services-1" href="#">
-	<div class="desc">
-	<h3 class="mb-5 text-center" style="padding-top: 70px; font-size: large;">Machine Learning</h3>
-	</div>
-	</a>
-	</div>
-	<div class="col-md-4 text-center d-flex ftco-animate">
-		<a class="services-1" href="#">
-		<div class="desc">
-		<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Task Automation</h3>
-		</div>
-		</a>
-		</div>
-<div class="col-md-4 text-center d-flex ftco-animate">
-<a class="services-1" href="#">
-<div class="desc">
-<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Data Analysis &amp; Visualization</h3>
-</div>
-</a>
-</div>
-<div class="col-md-4 text-center d-flex ftco-animate">
-
-<a class="services-1" href="#">
-<div class="desc">
-<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Web Development</h3>
-</div>
-</a>
-</div>
-
-<div class="col-md-4 text-center d-flex ftco-animate">
-<a class="services-1" href="#">
-<div class="desc">
-<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Complete Business Solution</h3>
-</div>
-</a>
-</div>
-
-<div class="col-md-4 text-center d-flex ftco-animate">
-<a class="services-1" href="#">
-<div class="desc">
-<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Help with Assignments and Projects</h3>
-</div>
-</a>
-</div>
-
-<div class="col-md-4 text-center d-flex ftco-animate">
-<a class="services-1" href="#">
-<div class="desc">
-<h3 class="mb-5" style="padding-top: 70px; font-size: large;">Graphics Design</h3>
-</div>
-</a>
-</div>
 	
+			<div class="slider-item">
+				
+				<div class="container">
+					<div class="row g-0 d-flex no-gutters slider-text align-items-center justify-content-center">
+						<div class="d-flex align-items-center ftco-animate text-center">
+							<div class="text">
+								<span class="subheading">Welcome to the Future of Development</span>
+								<h1 class="mb-4 mt-3">Innovative Solutions, Crafted for <span>You</span></h1>
+								<h2 class="mb-4 mt-3">Explore the power of modern technology with Rehub Developers</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 
-</div>
-</div>
+			</div>
+			<div class="slider-item">
+				
+				<div class="container">
+					<div class="row g-0 d-flex no-gutters slider-text align-items-center justify-content-center">
+						<div class="d-flex align-items-center ftco-animate text-center">
+							<div class="text">
+								<span class="subheading">Your Technology Partner</span>
+								<h1 class="mb-4 mt-3">Building Tomorrow's Solutions <span>Today</span></h1>
+								<h2 class="mb-4 mt-3">Let us help you stay ahead with custom software solutions</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+			<div class="slider-item">
+				
+				<div class="container">
+					<div class="row g-0 d-flex no-gutters slider-text align-items-center justify-content-center">
+						<div class="d-flex align-items-center ftco-animate text-center">
+							<div class="text">
+								<span class="subheading">Transforming Ideas into Reality</span>
+								<h1 class="mb-4 mt-3">Tailored Software for a <span>Competitive Edge</span></h1>
+								<h2 class="mb-4 mt-3">Partner with Rehub Developers for unique, scalable solutions</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="slider-item">
+				
+				<div class="container">
+					<div class="row g-0 d-flex no-gutters slider-text align-items-center justify-content-center">
+						<div class="d-flex align-items-center ftco-animate text-center">
+							<div class="text">
+								<span class="subheading">Where Creativity Meets Technology</span>
+								<h1 class="mb-4 mt-3">Custom Solutions for <span>Unique Challenges</span></h1>
+								<h2 class="mb-4 mt-3">We solve your business challenges with innovation and efficiency</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			<div class="slider-item">
+				
+				<div class="container">
+					<div class="row g-0 d-flex no-gutters slider-text align-items-center justify-content-center">
+						<div class="d-flex align-items-center ftco-animate text-center">
+							<div class="text">
+								<span class="subheading">Empowering Your Digital Transformation</span>
+								<h1 class="mb-4 mt-3">Innovative, Reliable, <span>Result-Driven</span></h1>
+								<h2 class="mb-4 mt-3">Accelerate your journey with tailored solutions from Rehub Developers</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire Us</a>
+								<a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Our Works</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+			</div>
+		</div>
+	</section>
+
 </section>
+
+<!-- SERVICES SECTION -->
+
+<div class="container my-5">
+	<div class="row align-items-center">
+		<!-- Service Image -->
+		<div class="col-md-6">
+			<img src="{% static 'images/web.png' %}" alt="Service Image" class="img-fluid" style="width: 80%;">
+		</div>
+		<!-- Service Write-up -->
+		<div class="col-md-6">
+			<h2 class="mb-3">Service Title</h2>
+			<p class="lead">This is a brief introduction to the service. Explain what it is, why it’s valuable, and how it benefits the customer. Highlight key features and the unique selling proposition.</p>
+			<p>Additional details can go here, including any special offers, case studies, or client testimonials that emphasize the effectiveness of the service. Make sure to tailor the content to your target audience's needs and interests.</p>
+			<a href="#contact-section" class="btn btn-primary py-2 px-4">Learn More</a>
+		</div>
+	</div>
+</div>
+
+<!-- SERICES SECTION -->
+
+<section class="ftco-section" id="services-section">
+    <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Services</h1>
+                <h2 class="mb-4">Services</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Service Items -->
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a class="services-1" href="#" onclick="showServiceDetails('software-development')">
+                    <div class="desc">
+                        <h3 class="mb-5 text-center" style="padding-top: 70px; font-size: large;">Software Development</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a class="services-1" href="#" onclick="showServiceDetails('machine-learning')">
+                    <div class="desc">
+                        <h3 class="mb-5 text-center" style="padding-top: 70px; font-size: large;">Machine Learning</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-flex ftco-animate">
+                <a class="services-1" href="#" onclick="showServiceDetails('task-automation')">
+                    <div class="desc">
+                        <h3 class="mb-5 text-center" style="padding-top: 70px; font-size: large;">Task Automation</h3>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Service Details Sections -->
+<div id="service-details" class="service-modal">
+    <div class="service-content">
+        <span class="close" onclick="closeServiceDetails()">&times;</span>
+
+        <!-- Software Development -->
+        <div id="software-development" class="service-detail">
+            <img src="path_to_image/software-development.jpg" alt="Software Development" class="img-fluid">
+            <h2>Software Development</h2>
+            <p>Our custom software development service is designed to bring your unique ideas to life. Whether you need a tailored application or a complete enterprise solution, we have the expertise to build it from the ground up.</p>
+        </div>
+
+        <!-- Machine Learning -->
+        <div id="machine-learning" class="service-detail">
+            <img src="path_to_image/machine-learning.jpg" alt="Machine Learning" class="img-fluid">
+            <h2>Machine Learning</h2>
+            <p>We offer advanced machine learning solutions to help your business harness the power of data. Our services include predictive analytics, natural language processing, and more.</p>
+        </div>
+
+        <!-- Task Automation -->
+        <div id="task-automation" class="service-detail">
+            <img src="path_to_image/task-automation.jpg" alt="Task Automation" class="img-fluid">
+            <h2>Task Automation</h2>
+            <p>Automate repetitive tasks and improve efficiency with our task automation services. We create solutions that save you time and reduce human error.</p>
+        </div>
+
+        <!-- Add more service details here -->
+    </div>
+</div>
+
+<!-- ABOUT REHUBDEVELOPERS -->
+
+
+
+<!-- FOUNDER SECTION -->
+
+<section id="founder-about" class="ftco-about img ftco-section ftco-no-pb">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h2 class="mb-2">About the Founder</h2>
+                <!-- Dropdown Button -->
+                <button class="btn btn-primary mb-2" type="button" data-toggle="collapse" data-target="#founder-details" aria-expanded="false" aria-controls="founder-details">
+                    Learn More About Kingsley Rhema
+                </button>
+            </div>
+        </div>
+        
+        <!-- Collapsible Content -->
+        <div class="collapse" id="founder-details">	
+			<section class="ftco-about img ftco-section ftco-no-pb">
+			<div class="container">
+			<div class="row d-flex">
+			<div class="col-md-6 col-lg-5 d-flex">
+			<div class="img-about img d-flex align-items-stretch">
+			<div class="overlay"></div>
+			<div class="img d-flex align-self-stretch align-items-center" style="background-image: url('{% static 'images/Logo_noBg.png' %}'); ">
+			</div>
+			</div>
+			</div>
+			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+			<div class="row justify-content-start pb-3">
+			<div class="col-md-12 heading-section ftco-animate">
+			<h1 class="big">About</h1>
+			<h2 class="mb-4">About Me</h2>
+			<p>I am a multifaceted professional with a passion for data science, backend development, and automation engineering</p>
+			<ul class="about-info mt-4 px-md-0 px-2">
+			<li class="d-flex"><span>Name:</span> <span>Kingsley Rhema</span></li>
+			<!-- <li class="d-flex"><span>Date of birth:</span> <span>July 03, 2005</span></li> -->
+			<!-- <li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li> -->
+			<!-- <li class="d-flex"><span>Zip code:</span> <span>101015</span></li> -->
+			<li class="d-flex"><span>Email:</span> <span><a href="mailto:inforehubdeveloper@gmail.com">inforehubdeveloper@gmail.com</a></span></li>
+			<li class="d-flex"><span>Phone: </span> <span><a href="https://wa.me/2348082046332">+234 808 204 6332</a></span></li>
+			</ul>
+			</div>    
+			</div>
+			<div class="counter-wrap ftco-animate d-flex mt-md-3">
+			<div class="text">
+			<p class="mb-4">
+			<span class="number" data-number="20">0</span>
+			<span>Project complete</span>
+			</p>
+			<p>
+				<a class="btn btn-primary py-3 px-3" href="#" download="">Download CV</a>
+			</p>
+			
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</section>
+			<section class="ftco-section ftco-no-pb" id="resume-section">
+			<div class="container">
+			<div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big big-2">education</h1>
+			<h2 class="mb-4">EDUCATION</h2>
+			<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p> -->
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<div class="resume-wrap ftco-animate">
+			<span class="date">2016-2021</span>
+			<h2>West African Senior Certificate Examination</h2>
+			<h5 style="color: grey;">TIMI COMPREHENSIVE COLLEGE</h5>
+			<p class="mt-4" style="color: white;">Computer Science &amp; Data Processing</p>
+			</div>
+			<!-- ENTER MORE FIELDS HERE -->
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2022-2023</span>
+				<h2>Certificate of Completion</h2><br>
+				<h5 style="color: grey;">BINCOM ACADEMY (Remote)</h5>
+			<p class="mt-4" style="color: white;">Python Development</p>
+				</div>
+			
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2023 - PRESENT</span>
+					<h2>B.S.C</h2>
+					<h5 style="color: grey;">WorldQuant University (Remote)</h5>
+				<p class="mt-4" style="color: white;">Data Scince</p>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2022-2023</span>
+					<h2>Certificate of Achievement</h2>
+					<h5 style="color: grey;">YOMI DENZEL FOUNDATION</h5>
+			<p class="mt-4" style="color: white;">Core & Advanced Python | Data science & Machine Learning | Blockchain Functional Training</p>
+				</div>
+			
+			<!-- ENTER MORE FIELDS HERE -->
+			<div class="resume-wrap ftco-animate">
+				<span class="date">2023 - PRESENT</span>
+				<h2>B.S.C</h2>
+				<h5 style="color: grey;">University of Ibadan</h5>
+			<p class="mt-4" style="color: white;">Computer Science</p>
+			</div>
+			</div>
+			</div>
+			<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+			<!-- <p><a class="btn btn-primary py-4 px-5" href="#">Download CV</a></p> -->
+			</div>
+			</div>
+			</div>
+			</section>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FOUNDER SECTION -->
+
 <!-- <section class="ftco-section" id="skills-section">
 <div class="container">
 <div class="row justify-content-center pb-5">
@@ -545,7 +695,7 @@
 <div class="col-md-7 ftco-animate text-center">
 <h2>I'm <span>Available</span> for freelancing</h2>
 <p></p>
-<p class="mb-0"><a  class="btn btn-primary py-3 px-5" href="#contact-section" >Hire me</a></p>
+<p class="mb-0"><a  class="btn btn-primary py-3 px-5" href="#contact-section" >Hire Us</a></p>
 </div>
 </div>
 </div>
