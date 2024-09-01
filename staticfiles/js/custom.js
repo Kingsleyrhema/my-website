@@ -41,23 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.closePopup = closePopup;  // Make closePopup function globally accessible
 
 
-    function showServiceDetails(serviceId) {
-        // Hide all service details
-        var serviceDetails = document.getElementsByClassName('service-detail');
-        for (var i = 0; i < serviceDetails.length; i++) {
-            serviceDetails[i].style.display = 'none';
-        }
-    
-        // Show the selected service detail
-        document.getElementById(serviceId).style.display = 'block';
-    
-        // Display the modal
-        document.getElementById('service-details').style.display = 'block';
-    }
-    
-    function closeServiceDetails() {
-        // Hide the modal
-        document.getElementById('service-details').style.display = 'none';
-    }
-    
+
 });
+
+
